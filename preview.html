@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehsana Urban Transport - Fast, Reliable City Travel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="clearfix">
+        <div class="container">
+            <div class="logo">🚍 Urban Transport</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#login">Login</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="home-content">
+            <h1>Mehsana Urban Transport</h1>
+            <p>Your trusted partner for fast, reliable, and affordable city travel in Mehsana</p>
+            <a href="#services" class="cta-button">Explore Services</a>
+        </div>
+    </section>
+
+    <section id="about" class="clearfix">
+        <div class="container">
+            <h2 class="section-title">About Mehsana Urban Transport</h2>
+            <div class="about-content" style="max-width: 800px; margin: 0 auto; text-align: center; padding: 0 20px;">
+                <p>Mehsana Urban Transport is the premier public transportation service serving Mehsana city and surrounding areas. We provide reliable bus services connecting all major locations including Modhera, Vijapur, and industrial areas.</p>
+                <p>Our mission is to make city travel convenient, affordable, and eco-friendly for students, workers, and families. With real-time tracking, digital ticketing, and 24/7 customer support, we ensure hassle-free commuting for everyone.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card" onclick="openServiceModal('digital')">
+                    <div class="service-icon">🎫</div>
+                    <h3>Digital Ticketing</h3>
+                    <p>Book tickets instantly through our app or website. No more standing in queues!</p>
+                </div>
+                <div class="service-card" onclick="openServiceModal('tracking')">
+                    <div class="service-icon">📱</div>
+                    <h3>Live Bus Tracking</h3>
+                    <p>Track your bus in real-time and never miss your ride again.</p>
+                </div>
+                <div class="service-card" onclick="openServiceModal('route')">
+                    <div class="service-icon">🚌</div>
+                    <h3>Route Planner</h3>
+                    <p>Find the fastest route between any two points in Mehsana with our smart planner.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="login" class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2 style="text-align: center; margin-bottom: 30px; color: #2c3e50;">Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginUsername">Username</label>
+                        <input type="text" id="loginUsername" required>
+                        <div class="error" id="loginUsernameError">Username is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required>
+                        <div class="error" id="loginPasswordError">Password must be at least 6 characters</div>
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="register" class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2 style="text-align: center; margin-bottom: 30px; color: #2c3e50;">Register</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="regName">Full Name</label>
+                        <input type="text" id="regName" required>
+                        <div class="error" id="regNameError">Name is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" required>
+                        <div class="error" id="regEmailError">Please enter a valid email</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <input type="password" id="regPassword" required>
+                        <div class="error" id="regPasswordError">Password must be at least 6 characters</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirmPassword">Confirm Password</label>
+                        <input type="password" id="regConfirmPassword" required>
+                        <div class="error" id="regConfirmPasswordError">Passwords do not match</div>
+                    </div>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="feedback" class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2 style="text-align: center; margin-bottom: 30px; color: #2c3e50;">Send Feedback</h2>
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="feedbackName">Name</label>
+                        <input type="text" id="feedbackName" required>
+                        <div class="error" id="feedbackNameError">Name is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackEmail">Email</label>
+                        <input type="email" id="feedbackEmail" required>
+                        <div class="error" id="feedbackEmailError">Please enter a valid email</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackMessage">Message</label>
+                        <textarea id="feedbackMessage" rows="5" required></textarea>
+                        <div class="error" id="feedbackMessageError">Message is required</div>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Feedback</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p> 2024 Mehsana Urban Transport. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="digitalModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🎫 Digital Ticketing</h2>
+                <span class="close" onclick="closeModal('digitalModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="service-hero">
+                    <div class="service-icon">🎫</div>
+                    <h1>Digital Ticketing System</h1>
+                    <p>Book your bus tickets instantly. Fast, secure, and paperless!</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>⚡ Instant Booking</h3>
+                        <p>Book in 30 seconds from anywhere</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>💳 Multiple Payments</h3>
+                        <p>UPI, Cards, Wallets supported</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>📱 Mobile QR Tickets</h3>
+                        <p>No printing required</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🔒 Secure Transactions</h3>
+                        <p>SSL encrypted payments</p>
+                    </div>
+                </div>
+                <div class="demo-form">
+                    <h3>🧪 Try Demo Booking</h3>
+                    <form id="ticketDemoForm">
+                        <div class="form-group">
+                            <label>From</label>
+                            <select required>
+                                <option value="">Select Location</option>
+                                <option>Mehsana ST Bus Stand</option>
+                                <option>Modhera</option>
+                                <option>Vijapur</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>To</label>
+                            <select required>
+                                <option value="">Select Location</option>
+                                <option>Industrial Area</option>
+                                <option>Himmatnagar</option>
+                                <option>Palanpur</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="submit-btn">Book Demo Ticket</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="trackingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📱 Live Bus Tracking</h2>
+                <span class="close" onclick="closeModal('trackingModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="service-hero">
+                    <div class="service-icon">📱</div>
+                    <h1>Live Bus Tracking</h1>
+                    <p>Track your bus in real-time. Never miss your ride!</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>🗺️ Real-time GPS</h3>
+                        <p>Live location updates every 10 seconds</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>⏱️ ETA Predictions</h3>
+                        <p>Arrival time predictions</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🔔 Notifications</h3>
+                        <p>Bus approaching alerts</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>📈 Traffic Updates</h3>
+                        <p>Live traffic conditions</p>
+                    </div>
+                </div>
+                <div style="background: #e1f5fe; padding: 30px; border-radius: 15px; text-align: center; margin: 30px 0;">
+                    <h3>🗺️ Live Map Demo</h3>
+                    <div style="height: 300px; background: linear-gradient(45deg, #b3e5fc, #e1f5fe); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #0277bd; margin-top: 20px;">
+                        🚌 Bus #MUT-123<br>ETA: 5 minutes<br>📍 Current Location: Radhanpur Road
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="routeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🚌 Route Planner</h2>
+                <span class="close" onclick="closeModal('routeModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="service-hero">
+                    <div class="service-icon">🚌</div>
+                    <h1>Smart Route Planner</h1>
+                    <p>Find the fastest route between any two points in Mehsana</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>🚀 Fastest Routes</h3>
+                        <p>AI-powered route optimization</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>⏰ Multiple Options</h3>
+                        <p>Fastest, Cheapest, Least Walk</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>📏 Distance Calculator</h3>
+                        <p>Exact distance and fare</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>⭐ User Ratings</h3>
+                        <p>Best rated routes</p>
+                    </div>
+                </div>
+                <div class="demo-form">
+                    <h3>🧭 Plan Your Route</h3>
+                    <form id="routeDemoForm">
+                        <div class="form-group">
+                            <label>From</label>
+                            <input type="text" placeholder="Enter starting point" required>
+                        </div>
+                        <div class="form-group">
+                            <label>To</label>
+                            <input type="text" placeholder="Enter destination" required>
+                        </div>
+                        <button type="submit" class="submit-btn">Find Route</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
